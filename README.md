@@ -1,8 +1,6 @@
-# ScrollFrame
+# jQuery.onInfiniteScroll
 
-Retain your scroll position between pages using an iframe. Especially helpful for infinite scrolling views.
-
-![](http://www.explainxkcd.com/wiki/images/5/56/infinite_scrolling.png)
+Callback when you reach the bottom of the page and ajax requests finish. Useful as an infinite scroll callback.
 
 ## Example
 
