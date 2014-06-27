@@ -1,7 +1,6 @@
 BIN = node_modules/.bin
 
-# Start the server
-example:
-	$(BIN)/jade example/index.jade -w
+test:
+	$(BIN)/mocha test/test.js
 
-.PHONY: example
+.PHONY: test
