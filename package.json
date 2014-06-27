@@ -26,5 +26,9 @@
   "dependencies": {
   },
   "devDependencies": {
+    "mocha": "*",
+    "benv": "*",
+    "should": "*",
+    "jquery": "*"
   }
 }
