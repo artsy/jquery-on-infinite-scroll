@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      ul {
+        list-style: none;
+        font-family: Helvetica;
+      }
+      li {
+        padding: 100px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul></ul>
+    <div id='scripts'>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>
+        $(function() {
+          var lis = _.map(new Array(100), function(n, i) {
+            return "<li><img src='http://placekitten.com/400/100'></li>"
+          }).join('')
+          $('ul').append(lis);
+        });
+      </script>
+    </div>
+  </body>
+</html>
