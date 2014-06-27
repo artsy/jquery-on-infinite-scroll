@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/artsy/scroll-frame.git"
+    "url": "http://github.com/artsy/jquery-on-infinite-scroll.git"
   },
   "author": {
     "name": "Craig Spaeth",
