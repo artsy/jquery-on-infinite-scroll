@@ -3,7 +3,9 @@
   var onScroll = function(e) {
     if ($.active != 0) return;
 
-    var offset = e.data.offset;
+    if (e.data) {
+      var offset = e.data.offset;
+    };
 
     if (offset === undefined) {
       offset = $(window).height() * 0.7;
@@ -16,12 +18,12 @@
     $(window).trigger('infiniteScroll');
   };
 
-  $.onInfiniteScroll = function(callback, offset) {
+  $.onInfiniteScroll = function(callback, options) {
     $(window).on('infiniteScroll', callback);
-    $(window).on('scroll', { offset: offset}, onScroll);
+    $(window).on('scroll', options, onScroll);
   };
 
-  $.destroyInfiniteScroll = function(callback, offset) {
+  $.destroyInfiniteScroll = function() {
     $(window).off('infiniteScroll');
     $(window).off('scroll');
   };

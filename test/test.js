@@ -17,7 +17,7 @@ describe('onInfiniteScroll', function() {
 
   it('uses the callback when you have scrolled to the bottom', function(done) {
     $.onInfiniteScroll(function() {
-      done(false)
+      done();
     });
     $.fn.scrollTop = function() { return 40 };
     $.fn.height = function() {
@@ -33,8 +33,8 @@ describe('onInfiniteScroll', function() {
 
   it('uses optional offset', function(done) {
     $.onInfiniteScroll(function() {
-      done()
-    }, 50);
+      done();
+    }, { offset: 50 });
     $.fn.scrollTop = function() { return 0 };
     $.fn.height = function() {
       if (this[0] == window) {

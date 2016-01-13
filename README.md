@@ -11,7 +11,7 @@ $.onInfiniteScroll(function() {
 
 $.onInfiniteScroll(function() {
     // Pass an optional offset from the page bottom at which to trigger the callback.
-}, 100);
+}, { offset: 100 });
 
 // Remove the event listeners.
 $.destroyInfiniteScroll();
