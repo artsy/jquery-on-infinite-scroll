@@ -1,17 +1,32 @@
 (function() {
 
-  var onScroll = function() {
+  var onScroll = function(e) {
     if ($.active != 0) return;
-    var offset = $(window).height() * 0.7,
-      viewPortBottom = $(window).scrollTop() + $(window).height(),
-      reachedBottom = viewPortBottom >= $(document).height() - offset;
+
+    if (e.data) {
+      var offset = e.data.offset;
+    };
+
+    if (offset === undefined) {
+      offset = $(window).height() * 0.7;
+    }
+    var viewPortBottom = $(window).scrollTop() + $(window).height(),
+      breakPoint = $(document).height() - offset;
+      reachedBottom = viewPortBottom >= breakPoint;
+
     if (!reachedBottom) return;
     $(window).trigger('infiniteScroll');
   };
 
-  $.onInfiniteScroll = function(callback) {
+  $.onInfiniteScroll = function(callback, options) {
     $(window).on('infiniteScroll', callback);
-    $(window).on('scroll', onScroll);
+    $(window).on('scroll', options, onScroll);
   };
 
-})(jQuery);
+  $.destroyInfiniteScroll = function() {
+    $(window).off('infiniteScroll');
+    $(window).off('scroll');
+  };
+
+
+})();

@@ -8,6 +8,13 @@ Callback when you reach the bottom of the page and ajax requests finish. Useful 
 $.onInfiniteScroll(function() {
     // Fetch & append some content
 });
+
+$.onInfiniteScroll(function() {
+    // Pass an optional offset from the page bottom at which to trigger the callback.
+}, { offset: 100 });
+
+// Remove the event listeners.
+$.destroyInfiniteScroll();
 ````
 
 ## Contributing
