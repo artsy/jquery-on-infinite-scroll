@@ -1,6 +1,6 @@
 {
   "name": "jquery-on-infinite-scroll",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Callback when you reach the bottom of the page and ajax requests finish. Useful as an infinite scroll callback.",
   "keywords": [
     "scroll",
