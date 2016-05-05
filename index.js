@@ -20,13 +20,12 @@
 
   $.onInfiniteScroll = function(callback, options) {
     $(window).on('infiniteScroll', callback);
-    $(window).on('scroll', options, onScroll);
+    $(window).on('scroll.infinite', options, onScroll);
   };
 
   $.destroyInfiniteScroll = function() {
     $(window).off('infiniteScroll');
-    $(window).off('scroll');
+    $(window).off('scroll.infinite');
   };
-
 
 })();
